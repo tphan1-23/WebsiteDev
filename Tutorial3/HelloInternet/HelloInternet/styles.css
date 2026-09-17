@@ -6,7 +6,7 @@
 body {
   background-color: rgb(253, 221, 230);
   color: rgb(65, 25, 45); 
-  font-family: sans-serif;
+  font-family: 'sans-serif';
   margin: 30px;
   padding: 0 20px;
 }
