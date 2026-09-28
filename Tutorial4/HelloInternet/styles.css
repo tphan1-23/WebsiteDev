@@ -58,6 +58,8 @@ p {
   border: 4px solid rgb(255, 255, 255);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(120, 15, 60, 0.2);
+  /* ADDED (filter): slight color/contrast boost */
+  filter: saturate(1.1) contrast(1.05);
 }
 
 .grid-container {
