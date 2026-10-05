@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #24312b;
+    background: #f4f0e7;
+}
+
+body {
+    margin: 0;
+}
+
+header, main, footer {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    padding: 38px 0 24px;
+    border-bottom: 2px solid #24312b;
+}
+
+.brand {
+    max-width: 610px;
+}
+
+.eyebrow, .tag, .card-number {
+    font-weight: 700;
+    letter-spacing: .14em;
+    font-size: .76rem;
+}
+
+h1 {
+    margin: 5px 0 8px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.2rem, 5vw, 4.6rem);
+    line-height: .95;
+}
+
+.brand > p:last-child {
+    margin: 0;
+    max-width: 560px;
+    line-height: 1.5;
+}
+
+/* Navigation layout */
+
+nav ul {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 14px;
+    color: #24312b;
+    text-decoration: none;
+    border: 1px solid #24312b;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+nav a:hover, nav a:focus, nav a.current {
+    background: #24312b;
+    color: #fff;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 36px;
+    align-items: center;
+    padding: 58px 0;
+}
+
+.hero-copy h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.1rem, 4vw, 3.7rem);
+    margin: 8px 0 14px;
+}
+
+.hero-copy > p:not(.tag) {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    max-width: 580px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 18px;
+    background: #b95f3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.hero-art {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    background: linear-gradient(#d8e6e3 0 55%, #d7cda9 55%);
+    border: 2px solid #24312b;
+    border-radius: 22px;
+}
+
+.sun {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #e7a34a;
+    top: 45px;
+    right: 58px;
+}
+
+.mountain {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 220px solid transparent;
+    border-right: 220px solid transparent;
+}
+
+.mountain-back {
+    border-bottom: 210px solid #718e80;
+    bottom: 70px;
+    left: 15px;
+}
+
+.mountain-front {
+    border-bottom: 180px solid #3f6253;
+    bottom: 35px;
+    right: -80px;
+}
+
+.trail {
+    position: absolute;
+    width: 170px;
+    height: 180px;
+    background: #d8b17b;
+    bottom: -90px;
+    left: 38%;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding-bottom: 54px;
+}
+
+.card, .trail-note {
+    padding: 24px;
+    border: 1px solid #75847d;
+    border-radius: 12px;
+    background: #fffdf8;
+}
+
+.card h3, .trail-note h3 {
+    margin: 5px 0 8px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.card p:last-child, .trail-note p {
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.trail-note {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: baseline;
+    gap: 22px;
+    background: #dce6df;
+}
+
+.trail-note h3 {
+    white-space: nowrap;
+}
+
+footer {
+    border-top: 2px solid #24312b;
+    padding: 20px 0 32px;
+    font-size: .9rem;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 700px) {
+
+    header, main, footer {
+        width: min(100% - 28px, 1120px);
+    }
+
+    header {
+        display: block;
+        padding-top: 24px;
+    }
+
+    h1 {
+        font-size: 2.55rem;
+    }
+
+    nav {
+        margin-top: 22px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    nav a {
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 36px 0;
+    }
+
+    .hero-art {
+        height: 230px;
+    }
+
+    .sun {
+        width: 66px;
+        height: 66px;
+        top: 32px;
+        right: 35px;
+    }
+
+    .mountain-back {
+        left: -70px;
+        bottom: 25px;
+    }
+
+    .mountain-front {
+        right: -145px;
+        bottom: 5px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trail-note {
+        display: none;
+    }
+}
