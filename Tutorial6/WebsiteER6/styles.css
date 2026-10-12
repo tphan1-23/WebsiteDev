@@ -97,8 +97,8 @@ main {
 /* ---------- Table ---------- */
 
 table {
-    width: 75%;
-    border-collapse: separate;
+    width: 100%;
+    border-collapse: collapse;
     background-color: white;
 }
 
@@ -129,7 +129,7 @@ thead tr:first-child th {
 
 /* Second header row: individual column headings */
 
-thead tr:nth-child(3) th {
+thead tr:nth-child(2) th {
     background-color: #dce7df;
     color: #1f382c;
 }
