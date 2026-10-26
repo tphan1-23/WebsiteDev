@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Feedback | Digital Twin</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Feedback</h1>
+        <p>
+            Help improve this Digital Twin website! All fields except the page checkboxes and comments are required.
+        </p>
+    </header>
+
+    <main class="main-content standalone">
+        <form class="feedback-form" action="#" method="post">
+
+            <fieldset>
+                <legend>About You</legend>
+                <div class="fieldset-box">
+
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="role">I am a...</label>
+                    <select id="role" name="role" required>
+                        <option value="">-- Select one --</option>
+                        <option value="student">Student</option>
+                        <option value="educator">Educator</option>
+                        <option value="curious">Just curious</option>
+                    </select>
+                </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Experience</legend>
+                <div class="fieldset-box">
+
+                <div class="form-row">
+                    <span class="field-label" id="rating-label">Overall, how was this website?</span>
+                    <div class="choice-group" role="radiogroup" aria-labelledby="rating-label">
+                        <label class="choice"><input type="radio" name="rating" value="great" required> Great</label>
+                        <label class="choice"><input type="radio" name="rating" value="good"> Good</label>
+                        <label class="choice"><input type="radio" name="rating" value="okay"> Okay</label>
+                        <label class="choice"><input type="radio" name="rating" value="poor"> Needs work</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <span class="field-label" id="topics-label">Which pages did you find helpful?</span>
+                    <div class="choice-group" role="group" aria-labelledby="topics-label">
+                        <label class="choice"><input type="checkbox" name="helpful" value="home"> Home</label>
+                        <label class="choice"><input type="checkbox" name="helpful" value="simulation"> Simulation and Testing</label>
+                        <label class="choice"><input type="checkbox" name="helpful" value="applications"> Applications</label>
+                    </div>
+                </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comments</legend>
+                <div class="fieldset-box">
+
+                <div class="form-row">
+                    <label for="comments">Comments or suggestions</label>
+                    <textarea id="comments" name="comments" rows="6" maxlength="1000"
+                        placeholder="What topics would you like to see added or improved?"></textarea>
+                </div>
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button type="submit">Submit Feedback</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="simulationTesting.html">Simulation and Testing</a></li>
+            <li><a href="applications.html">Applications</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>Digital Twin &#169; 2026</p>
+    </footer>
+
+</body>
+</html>
